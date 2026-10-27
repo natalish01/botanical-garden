@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
+:root {
+    --font-main:"Libre Baskerville", serif;
+    /* typography */
+    --heading-1: 57px;
+    --heading-2: 45px;
+    --heading-3: 23px;
+    --base: 14px;
+    --links:14px; 
+
+    /* colors */
+    --background:#343D33;
+    --bg:#414840;
+    --text: #475F45;
+    --light: #fff;
+
+    /*  */
+    --primary-radius: 20px;
+}
+body{
+    font-family: var(--font-main);
+    min-height: 100vh;
+    width: 100%;
+    color: var(--text);
+}
+/* utility classes START */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* width: 90%; */
+}
+.container-2{
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 96px 0;
+    /* width: 80%; */
+}
+.d-flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+.align-baseline{
+    align-items: baseline;
+}
+.d-column {
+    flex-direction: column;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+a{
+    color: var(--light);
+}
+.gap-40{
+    gap: 40px;
+}
+.bold-700 {
+    font-weight: 700;
+}
+.lh-110 {
+    line-height: 110%;
+}
+
+.lh-150 {
+    line-height: 150%;
+}
+a{
+    color: var(--text);
+}
+/* utility classes END */
+header{
+    height: 88px;
+    .logo-text{
+        margin-left: 14px;
+        color: #333333;
+        p:first-child{
+            font-weight: 500;
+            font-size: 23px;
+            letter-spacing: 4px;
+            margin-bottom: 5px;
+        }
+        p:last-child{
+            font-size: 15px;
+        }
+    }
+    nav{
+        ul{
+            font-family: roboto;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+        .btn{
+            border: 2px solid var(--text);
+            padding: 15px 30px;
+            &:hover{
+                background-color: var(--text);
+                color: var(--light);
+            }
+        }
+    }
+}
+main{
+    .hero{
+        margin-top: 56px;
+        .content{
+            max-width: 528px;
+            h1{
+                font-size: var(--heading-1);
+                margin-bottom: 16px;
+            }
+            p{
+                font-size: 25px;
+                margin-bottom: 32px;
+                font-weight: 300;
+            }
+            .buttons{
+                gap: 16px;
+                button{
+                    border: 2px solid var(--text);
+                    padding: 20px 40px;
+                    color: var(--text);
+                    font-size: var(--links);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    background-color: transparent;
+                    &:hover{
+                        background-color: var(--text);
+                        color: var(--light);
+                    }
+                }
+            }
+           
+        }
+        .empty-div{
+            width: 200px;
+            height: 69px;
+            background-color: #D9D9D9;
+        }
+        .arch{
+            width: 380px;
+            height: 560px;
+            border-radius: 190px 190px 0 0;
+            border: 4px solid #343D33;
+        }
+    }
+    .discover{
+        margin-top: 180px;
+        background-color: var(--bg);
+        color: var(--light);
+        .discover-item{
+            margin-bottom: 80px;
+            .discover-content{
+                max-width: 410px;
+                h2{
+                    font-size: var(--heading-2);
+                    margin-bottom: 16px;
+                }
+                p{
+                    font-size: var(--base);
+                    margin-bottom: 32px;
+                    font-weight: 400;
+                }
+                button{
+                    border: 2px solid var(--light);
+                    padding: 20px 40px;
+                    color: var(--light);
+                    font-size: var(--links);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    background-color: transparent;
+                    &:hover{
+                        background-color: var(--light);
+                        color: var(--text);
+                    }
+                }
+            }
+        }
+    }
+    .updates{
+        margin-top: 96px;
+        h2{
+            font-size: var(--heading-2);
+            color: var(--bg);
+            margin-bottom: 27px;
+        }
+        .view-all{
+            gap: 20px;
+            .line {
+                width: 130px;
+                height: 2px;
+                background: var(--text);
+            }
+        }
+        .news-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 48px;
+
+            h3{
+                line-height: 110%;
+                font-size: var(--heading-3);
+            }
+            p{
+               line-height: 150%;
+               color: var(--bg);
+               font-size: 16px;
+            }
+            time{
+                color:var(--background) ;
+                font-style: italic;
+            }
+        }
+    }
+
+}
